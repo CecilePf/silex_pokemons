@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="pokemons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <title>Pokemons - Attack</title>
+</head>
+
+<body>
+    <div class="container">
+        {% include 'header.php' %}
+        <header>
+            <h1>Attaque du Pokémon</h1>
+            <br>
+        </header>
+        {% for attack in attacks %}
+        <article>
+            <!-- <h4>Nom : {{attack.AttackPokemon}}</h4>
+            <p>Description :  {{attack.AttackDescPokemon}}</p> -->
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{attack.AttackPokemon}}</td>
+                        <td>{{attack.AttackDescPokemon}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+        {% endfor %}
+    </div>
+</body>
+</html>

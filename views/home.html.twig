@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="pokemons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <title>Pokemons - Home</title>
+</head>
+
+<body>
+    <div class="container">
+        {% include 'header.php' %}
+        <header>
+            <h1>Pokemons ! Attrapez les tous ! ♫</h1>
+        </header>
+        {% for pokemon in pokemons %}
+
+        <article class="list-group">
+            <div class="list-group-item list-group-item-action">
+                <h3>{{pokemon.NameTrainer}}</h3>
+                <p>{{pokemon.NamePokemon}}</p>
+            </div>
+        </article>
+
+        {% endfor %}
+    </div>
+</body>
+</html>
